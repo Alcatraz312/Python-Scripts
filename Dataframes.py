@@ -67,6 +67,14 @@ print(Student1.loc[1 , "City"])
 Student1 = Student1.drop([0,1])      # here comma is used for range
 print(Student1)
 
+# drop/delete/remove column(s)
+Student1 = Student1.drop("Rno" , axis = 1)
+
+#Sort index/label or value
+print(Student1.sort_index(axis = 0))      #ascending true is default set 
+print(Student1.sort_index(ascending = False , axis = 0))
+print(Student1.sort_values("Name" , ascending = False))
+print(Student1.sort_values(["Score1","Score2"] , ascending = False))
 
 
 
